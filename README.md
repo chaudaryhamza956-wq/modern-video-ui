@@ -5,7 +5,7 @@ A responsive video landing page built with HTML and CSS. Features include a mode
 
 ## 🚀 Live Demo
 See the project live in action: 
-🔗 **[Live Demo Link Website Ka Yahan Daalo]**
+🔗 https://chaudaryhamza956-wq.github.io/modern-video-ui/
 
 ---
 
