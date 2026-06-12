@@ -3,295 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Membership Application</title>
+    <title>pakistani flag</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 25%),
-                        radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.18), transparent 25%),
-                        linear-gradient(180deg, #04111f 0%, #0b1726 45%, #111827 100%);
-            font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-            color: #e2e8f0;
+            padding: 20px;
         }
-
-        .page-shell {
-            width: min(100%, 650px);
-            margin: 24px;
-            padding: 32px;
-            border-radius: 32px;
-            background: rgba(7, 16, 32, 0.92);
-            border: 1px solid rgba(148, 163, 184, 0.12);
-            box-shadow: 0 38px 90px rgba(7, 16, 32, 0.35);
-            backdrop-filter: blur(18px);
-        }
-
-        .page-header {
-            display: grid;
-            gap: 10px;
-            margin-bottom: 32px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 14px;
-            border-radius: 999px;
-            background: rgba(56, 189, 248, 0.14);
-            color: #7dd3fc;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .page-title {
-            margin: 0;
-            font-size: clamp(2rem, 2.4vw, 2.8rem);
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            color: #f8fafc;
-        }
-
-        .page-text {
-            margin: 0;
-            max-width: 44rem;
-            color: #cbd5e1;
-            font-size: 1rem;
-            line-height: 1.75;
-        }
-
-        .form-shell {
-            display: grid;
-            gap: 18px;
-            padding: 28px;
-            border-radius: 28px;
-            background: rgba(15, 23, 42, 0.96);
-            border: 1px solid rgba(148, 163, 184, 0.16);
-        }
-
-        .form-grid {
-            display: grid;
-            gap: 18px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .form-section {
-            display: grid;
-            gap: 10px;
-        }
-
-        label,
-        legend {
-            color: #9ca3af;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-        }
-
-        .pro-form input,
-        .pro-form select,
-        .pro-form textarea {
-            width: 100%;
-            padding: 16px 18px;
-            border-radius: 18px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            background: rgba(15, 23, 42, 0.9);
-            color: #f8fafc;
-            font-size: 0.98rem;
-            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-        }
-
-        .pro-form input:hover,
-        .pro-form select:hover,
-        .pro-form textarea:hover {
-            transform: translateY(-1px);
-        }
-
-        .pro-form input:focus,
-        .pro-form select:focus,
-        .pro-form textarea:focus {
-            outline: none;
-            border-color: #7dd3fc;
-            box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.14);
-        }
-
-        .radio-group,
-        .checkbox-group {
+        
+        .flag-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            align-items: center;
+            border: 2px solid #333;
+            width: 400px;
+            height: 200px;
         }
-
-        .radio-group label,
-        .checkbox-group label {
-            margin: 0;
-            color: #e2e8f0;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .pro-form input[type="radio"],
-        .pro-form input[type="checkbox"] {
-            accent-color: #38bdf8;
-            width: auto;
-            height: auto;
-        }
-
-        .form-footnote {
+        
+        .green-box {
+            width: 320px;
+            height: 200px;
+            background-color: #00501f;
             display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            color: #94a3b8;
-            font-size: 0.92rem;
-            line-height: 1.6;
-            margin-top: 6px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .white-box {
+            width: 80px;
+            height: 200px;
+            background-color: white;
+        }
+        
+        .moon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;                 
+            border-left: 15px solid white;     
+            position: relative;
         }
 
-        .pro-form button {
-            width: 100%;
-            margin-top: 10px;
-            padding: 18px 20px;
-            border: none;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
-            color: #020617;
-            font-size: 1.05rem;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .pro-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 18px 30px rgba(56, 189, 248, 0.22);
-        }
-
-        .note-card {
-            display: grid;
-            gap: 10px;
-            padding: 18px 20px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(148, 163, 184, 0.12);
-        }
-
-        .note-card strong {
-            color: #f8fafc;
-        }
-
-        @media (max-width: 700px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .page-shell {
-                padding: 24px;
-            }
-
-            .form-shell {
-                padding: 24px;
-            }
+        .star {
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            top: 8px;
+            left: 12px;
         }
     </style>
 </head>
 <body>
-    <div class="page-shell">
-        <div class="page-header">
-            <span class="badge">Elite Application</span>
-            <h1 class="page-title">Exclusive Access Request</h1>
-            <p class="page-text">Complete the form below to join an invitation-only program. This layout is designed for high-end clients, with premium spacing, clean input focus, and a refined user experience.</p>
-        </div>
-
-        <div class="form-shell">
-            <form action="/submit-data" method="POST" class="pro-form">
-                <div class="form-grid">
-                    <div class="form-row">
-                        <div class="form-section">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Hamza Chaudary" required>
-                        </div>
-                        <div class="form-section">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" autocomplete="email" placeholder="example@gmail.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-section">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+92 300 1234567" required>
-                        </div>
-                        <div class="form-section">
-                            <label for="country">Country</label>
-                            <select id="country" name="country" autocomplete="country-name" required>
-                                <option value="">Select country</option>
-                                <option value="pakistan">Pakistan</option>
-                                <option value="uae">UAE</option>
-                                <option value="usa">USA</option>
-                                <option value="uk">UK</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-section">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company" placeholder="Your company name" autocomplete="organization" required>
-                        </div>
-                        <div class="form-section">
-                            <label for="position">Position</label>
-                            <input type="text" id="position" name="position" placeholder="Founder, CEO, Director" autocomplete="organization-title" required>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <label for="password">Account Password</label>
-                        <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" placeholder="Minimum 8 characters" required>
-                    </div>
-
-                    <fieldset class="radio-group" aria-labelledby="gender-label">
-                        <legend id="gender-label">Gender</legend>
-                        <input type="radio" id="male" name="gender" value="male" required>
-                        <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
-                        <input type="radio" id="other" name="gender" value="other">
-                        <label for="other">Other</label>
-                    </fieldset>
-
-                    <div class="form-section">
-                        <label for="bio">Tell us about your goals</label>
-                        <textarea id="bio" name="bio" rows="5" placeholder="Briefly describe your purpose for joining." required></textarea>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I confirm the information is accurate and I agree to the Terms & Conditions</label>
-                    </div>
-
-                    <div class="note-card">
-                        <strong>Why this matters</strong>
-                        <p>Only essential details are requested. This form is intentionally simple, sophisticated, and suitable for premium clients.</p>
-                    </div>
-
-                    <button type="submit">Submit Application</button>
-                </div>
-            </form>
+    <h2>🇵🇰 Pakistani Flag 🇵🇰</h2>
+    <div class="flag-container">
+        <div class="white-box"></div>
+        <div class="green-box">
+            <div class="moon">
+                <div class="star">*</div>
+            </div>
         </div>
     </div>
 </body>
